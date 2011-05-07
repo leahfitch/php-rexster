@@ -1,0 +1,2 @@
+* Use cURL if available for persistent connections
+* Add more examples
