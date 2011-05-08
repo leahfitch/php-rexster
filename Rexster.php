@@ -9,7 +9,6 @@ class Rexster
     public function __construct($base_url='http://localhost:8182')
     {
         $this->base_url = $base_url;
-        $this->log = new Log('Rexster');
     }
     
     /**
