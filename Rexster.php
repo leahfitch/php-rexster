@@ -160,6 +160,19 @@ class RexsterGraph
     
     
     /**
+     * Get the edge with an id of $id
+     *
+     * @param mixed $id
+     * @return RexsterEdge
+     */
+    public function get_edge($id)
+    {
+        $data = $this->call('GET', '/edges/'.$id);
+        return new RexsterEdge($this, $data['results']);
+    }
+    
+    
+    /**
      * Execute a gremlin script
      * 
      * This method expects the result of the script to be a list
