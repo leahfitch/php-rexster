@@ -141,6 +141,17 @@ class RexsterGraph
     
     
     /**
+     * Delete the vertex with an id of $id
+     *
+     * @param mixed $id
+     */
+    public function delete_vertex($id)
+    {
+        $this->call('DELETE', '/vertices/'.$id);
+    }
+    
+    
+    /**
      * Create a new edge.
      * 
      * @param mixed $out_id
@@ -169,6 +180,17 @@ class RexsterGraph
     {
         $data = $this->call('GET', '/edges/'.$id);
         return new RexsterEdge($this, $data['results']);
+    }
+    
+    
+    /**
+     * Delete the edge with an id of $id
+     *
+     * @param mixed $id
+     */
+    public function delete_edge($id)
+    {
+        $this->call('DELETE', '/edges/'.$id);
     }
     
     
